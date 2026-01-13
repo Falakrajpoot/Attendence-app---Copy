@@ -3,17 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(145deg, #8487BF, #F0F1F2, #8487BF);
   color: #ffffff;
   min-height: 100vh;
 }
+
 .main {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
+
 .header {
   text-align: center;
   margin-bottom: 25px;
@@ -33,6 +36,7 @@ body {
   font-size: 1.1rem;
   color: #e3ecff;
 }
+
 .card {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
@@ -46,6 +50,7 @@ body {
 .card h2 {
   margin-bottom: 12px;
 }
+
 input,
 button {
   padding: 10px 12px;
@@ -78,10 +83,12 @@ button:hover {
 button.secondary {
   background: linear-gradient(135deg, #757575, #5a5a5a);
 }
+
 .summary p {
   font-size: 1.05rem;
   margin: 6px 0;
 }
+
 .filters,
 .filter-controls {
   display: flex;
@@ -142,7 +149,7 @@ tr:hover td {
   background: rgba(0, 0, 0, 0.65);
   justify-content: center;
   align-items: center;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 
@@ -179,6 +186,7 @@ tr:hover td {
 #adminModal {
   z-index: 1100;
 }
+
 #adminLoginModal {
   z-index: 1200;
 }
@@ -295,8 +303,19 @@ td {
   background: #8487BF !important;
   color: #ffffff !important;
 }
+#filter{
+  display: none;
+}
+#special {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6f73b5 !important;
+
+}
 
 @media (max-width: 768px) {
+
   input[type="text"],
   input[type="date"],
   input[type="password"] {
