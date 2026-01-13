@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Teacher Attendance System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="main">
+
+    <div class="header">
+      <h1>Teacher Attendance System</h1>
+      <p id="liveClock"></p>
+
+    </div>
+    <section class="card">
+      <input type="text" id="teacherInput" placeholder="Enter your name" />
+      <button id="markBtn">Mark Attendance</button>
+      <p id="message"></p>
+    </section>
+    <section class="card summary">
+      <p>Total Teachers: <span id="totalTeachers">0</span></p>
+      <p>Present Today: <span id="presentToday">0</span></p>
+      <p>Absent Today: <span id="absentToday">0</span></p>
+    </section>
+    <section class="card">
+      <h3>❌ Absent Teachers</h3>
+      <ul id="absentList"></ul>
+    </section>
+    <section class="card" id="filter">
+      <input type="date" id="dateFilter" />
+      <button id="filterBtn">Filter</button>
+      <button id="resetBtn">Reset</button>
+    </section>
+    <section class="card" id="filter">
+      <input type="text" id="searchName" placeholder="Search teacher" />
+      <button id="searchBtn">Search</button>
+    </section>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Day</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <section class="card">
+      <button id="openAdminBtn">🔐 Admin Dashboard</button>
+    </section>
+    <div class="modal" id="addTeacherModal">
+      <div class="modal-content">
+        <h3>Add Teacher</h3>
+        <input type="text" id="newTeacherName" placeholder="Teacher Name" />
+        <button id="saveTeacherBtn">Save</button>
+        <button class="secondary" id="cancelTeacherBtn">Cancel</button>
+      </div>
+    </div>
+    <div class="modal" id="adminLoginModal">
+      <div class="modal-content">
+        <h3>Admin Login</h3>
+        <input type="text" id="adminUsername" placeholder="Username" />
+        <input type="password" id="adminPassword" placeholder="Password" />
+        <button id="adminLoginBtn">Login</button>
+        <button class="secondary" id="cancelAdminLoginBtn">Cancel</button>
+        <p id="adminLoginMsg"></p>
+      </div>
+    </div>
+    <div class="modal" id="adminModal">
+      <div class="modal-content large">
+        <h2>🛠 Admin Dashboard</h2>
+
+        <div class="filters">
+          <input type="date" id="adminDateFilter" />
+          <input type="text" id="adminSearchName" placeholder="Search teacher" />
+          <button id="adminFilterBtn">Filter</button>
+          <button id="adminResetBtn" class="secondary">Reset</button>
+          <button id="adminExportBtn">Export CSV</button>
+          <button id="closeAdminBtn" class="secondary">Close</button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Day</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody"></tbody>
+        </table>
+      </div>
+      <section class="card" id="teacher">
+        <button id="addTeacherBtn">➕ Add Teacher</button>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
